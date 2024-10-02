@@ -37,10 +37,10 @@ class Track:
             )
 
         if not album:
-            album_part = 'UNKNOWN ALBUM'
+            album_part = '<UNKNOWN ALBUM>'
         else:
-            album_part = f'({album.title}'
-        return f'{artists_part} - {album_part} - {title}'
+            album_part = f'<{album.title}>'
+        return f'{artists_part} - {title} {album_part}'
 
     def __repr__(self):
         return f"Track({repr(self.artists)}, {repr(self.album)}, {repr(self.title)})"
